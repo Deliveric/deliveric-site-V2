@@ -171,6 +171,27 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdro
 .viewer img{width:100%;border-radius:10px;aspect-ratio:16/9;object-fit:cover;background:var(--cream)}
 .viewer figcaption{color:var(--muted);font-size:.85rem;padding:8px 6px 2px}
 
+/* dsr */
+.dsr{background:var(--cream)}
+.dsr-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:22px}
+.dsr-k{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;text-align:center}
+.dsr-k.hero{background:var(--ink);border-color:var(--ink)}
+.dsr-k .n{font-size:clamp(2.2rem,4vw,3rem);font-weight:900;line-height:1.1}
+.dsr-k.hero .n{color:var(--amber)}
+.dsr-k .l{color:var(--muted);font-size:.95rem;margin-top:6px;font-weight:600}
+.dsr-k.hero .l{color:#D9D0C7}
+.dsr-chart{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px 26px 18px}
+.dsr-chart h3{font-size:1.1rem;margin-bottom:4px}
+.dsr-chart p{color:var(--muted);font-size:.9rem;margin-bottom:18px}
+.dsr-bars{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:12px;align-items:end;height:220px;border-bottom:1px solid var(--line);padding-top:8px}
+.dsr-bar{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;position:relative}
+.dsr-bar i{display:block;width:100%;max-width:52px;background:var(--amber);border-radius:8px 8px 0 0;min-height:4px}
+.dsr-bar .v{font-size:.8rem;font-weight:800;margin-bottom:6px}
+.dsr-bar b{position:absolute;bottom:-28px;font-size:.85rem;color:var(--muted);font-weight:700}
+.dsr-bars{margin-bottom:34px}
+.dsr-note{text-align:center;margin-top:26px}
+@media (max-width:900px){.dsr-chart{padding:20px 14px 14px}.dsr-kpis{grid-template-columns:1fr}.dsr-bars{gap:6px}.dsr-bar .v{font-size:.68rem}.dsr-bar b{font-size:.72rem}}
+
 /* why */
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .why{border:1px solid var(--line);border-radius:var(--r);padding:28px;transition:box-shadow .2s,transform .2s}
@@ -451,6 +472,23 @@ footer{background:#110F0E;color:#B8AFA5;padding:56px 0 28px;margin-top:0}
   </div>
 </section>
 
+<section id="dsr" class="dsr">
+  <div class="wrap">
+    <div class="head reveal"><span class="tag" data-i="dsr_tag">Delivery performance</span><h2 data-i="dsr_t">Delivered with confidence, across Egypt</h2><p data-i="dsr_p">Real results from our network, January to August 2026.</p></div>
+    <div class="dsr-kpis reveal">
+      <div class="dsr-k hero"><div class="n" data-i="dsr_k1">87.9%</div><div class="l" data-i="dsr_k1l">Delivery success rate</div></div>
+      <div class="dsr-k"><div class="n" data-i="dsr_k2">97,977</div><div class="l" data-i="dsr_k2l">Shipments handled</div></div>
+      <div class="dsr-k"><div class="n" data-i="dsr_k3">86,157</div><div class="l" data-i="dsr_k3l">Successful outcomes</div></div>
+    </div>
+    <div class="dsr-chart reveal">
+      <h3 data-i="dsr_ct">Monthly success rate</h3>
+      <p data-i="dsr_cp">Share of shipments that ended successfully each month, including partial deliveries, replacements and returns with cost paid. Bars start at 80%.</p>
+      <div class="dsr-bars" role="img" aria-label="Monthly delivery success rate from January to August 2026, between 86.8% and 89.3%"><div class="dsr-bar" title="Jan: 88.8% of 11,560 shipments"><span class="v">88.8%</span><i style="height:44%"></i><b data-i="dsr_m0">Jan</b></div><div class="dsr-bar" title="Feb: 89.1% of 10,292 shipments"><span class="v">89.1%</span><i style="height:45%"></i><b data-i="dsr_m1">Feb</b></div><div class="dsr-bar" title="Mar: 88.4% of 12,125 shipments"><span class="v">88.4%</span><i style="height:42%"></i><b data-i="dsr_m2">Mar</b></div><div class="dsr-bar" title="Apr: 87.0% of 13,998 shipments"><span class="v">87.0%</span><i style="height:35%"></i><b data-i="dsr_m3">Apr</b></div><div class="dsr-bar" title="May: 89.3% of 11,678 shipments"><span class="v">89.3%</span><i style="height:46%"></i><b data-i="dsr_m4">May</b></div><div class="dsr-bar" title="Jun: 86.8% of 13,015 shipments"><span class="v">86.8%</span><i style="height:34%"></i><b data-i="dsr_m5">Jun</b></div><div class="dsr-bar" title="Jul: 87.1% of 11,850 shipments"><span class="v">87.1%</span><i style="height:35%"></i><b data-i="dsr_m6">Jul</b></div><div class="dsr-bar" title="Aug: 87.6% of 13,459 shipments"><span class="v">87.6%</span><i style="height:38%"></i><b data-i="dsr_m7">Aug</b></div></div>
+    </div>
+    <div class="dsr-note reveal"><a class="btn btn-amber" href="#contact" data-i="dsr_cta">Get your merchant report</a></div>
+  </div>
+</section>
+
 <section id="why">
   <div class="wrap">
     <div class="head reveal"><span class="tag" data-i="wy_tag">Why Deliveric</span><h2 data-i="wy_t">Built for brands that care about every order</h2></div>
@@ -572,6 +610,7 @@ k1:"نسبة التسليم",k2:"الرصيد",k3:"خارج النهارده",d1
 db_tag:"تحكم كامل",db_t:"شوف كل طلب وكل جنيه لحظة بلحظة",db_p:"تابع الشحنات، وراقب رصيدك، وصدّر التقارير وقت ما تحتاج.",f1t:"تتبع مباشر",f1:"تحديثات فورية من تطبيق المندوب.",f2t:"رصيد لحظي",f2:"رصيد التحصيل بيتحدّث أول ما الطلب يتسلّم.",f3t:"تقارير ذكية",f3:"فلترة وبحث وتصدير إكسل أو CSV أو PDF.",f4t:"موظف مخصص",f4:"موظف خدمة عملاء عارف حسابك.",
 sh_tag:"ديليفريك مصر على Shopify",sh_t:"شحن بضغطة واحدة من متجرك على Shopify",sh_p:"نزّل تطبيقنا المجاني والطلبات غير المنفذة هتتزامن أوتوماتيك. اختارها ونفّذها مرة واحدة، والشحنة والبوليصة ورقم التتبع بيتعملوا بضغطة، والحالة بترجع لـ Shopify لحظيًا.",sh_c1:"على متجر تطبيقات Shopify",sh_c2b:"مجاني",sh_c2:"للتثبيت",sh1:"مزامنة تلقائية للطلبات غير المنفذة",sh2:"تنفيذ جماعي بضغطة",sh3:"الشحنة والبوليصة ورقم التتبع فورًا",sh4:"تحديثات الحالة لحظيًا داخل Shopify",sh_cta:"حمّل التطبيق من متجر Shopify",sh_q:"\"بيخلي تنفيذ الطلبات وتتبعها أسهل بكتير.\"",sh_qc:"تقييم تاجر على متجر تطبيقات Shopify",
 o_sel:"٣ طلبات مختارة",o_btn:"نفّذ مع ديليفريك",o1:"مدينة نصر",o2:"الإسكندرية",o3:"٦ أكتوبر",o4:"تم التسليم",
+dsr_tag:"أداء التوصيل",dsr_t:"توصيل بثقة في كل مصر",dsr_p:"نتائج حقيقية من شبكتنا، من يناير إلى أغسطس ٢٠٢٦.",dsr_k1:"٨٧٫٩٪",dsr_k1l:"نسبة نجاح التوصيل",dsr_k2:"٩٧٬٩٧٧",dsr_k2l:"شحنة تم التعامل معها",dsr_k3:"٨٦٬١٥٧",dsr_k3l:"شحنة انتهت بنجاح",dsr_ct:"نسبة النجاح الشهرية",dsr_cp:"نسبة الشحنات اللي انتهت بنجاح كل شهر، شاملة التسليم الجزئي والاستبدال والمرتجعات المدفوع تكلفتها. الأعمدة تبدأ من ٨٠٪.",dsr_cta:"اطلب تقرير تاجرك",dsr_m0:"يناير",dsr_m1:"فبراير",dsr_m2:"مارس",dsr_m3:"أبريل",dsr_m4:"مايو",dsr_m5:"يونيو",dsr_m6:"يوليو",dsr_m7:"أغسطس",
 is_tag:"تقارير التجار",is_t:"بيانات بتكبّر بيزنسك",is_p:"كل تاجر مع ديليفريك يقدر ياخد تقرير تفصيلي من شحناته: فين بتكسب، وفين الطلبات بتضيع، وفلوسك بترجع بسرعة قد إيه، وأنهي عملاء ترجعهم.",
 tb1:"نظرة عامة",tb1d:"نسبة نجاحك وإيه اللي حصل لكل طلب.",tb2:"المناطق",tb2d:"اعلن في المناطق اللي التوصيل فيها أقوى.",tb3:"الاتجاه الشهري",tb3d:"خطط للمخزون والحملات شهر بشهر.",tb4:"سرعة التحويل",tb4d:"اعرف فلوسك بترجع بسرعة قد إيه.",tb5:"الطلبات الضايعة",tb5d:"ليه الطلبات بتفشل وفين، علشان تعالج السبب.",tb6:"تحليل العملاء",tb6d:"كام عميل بيرجع وبيشتروا إيه.",tb7:"خطة استرجاع العملاء",tb7d:"عروض جاهزة مع قائمة العملاء.",is_cap:"تقرير نموذجي من تاجر حقيقي لدى ديليفريك بعد حذف اسم المتجر.",
 wy_tag:"ليه ديليفريك",wy_t:"مصمم للبراندات اللي بتهتم بكل طلب",w1t:"موثوق وسريع",w1:"٨٨٫٧٪ من الشحنات بتنتهي بنجاح، و٩٢٪ من الطلبات الناجحة بتوصل خلال محاولتين.",w2t:"تحصيل آمن",w2:"كاش وإنستاباي ومحافظ عند الباب، مع رصيد لحظي وتسويات مرتين في الأسبوع.",w3t:"تحكم لحظي",w3:"تتبع مباشر للمندوب وتحديثات فورية من الاستلام للتسليم.",w4t:"دعم مخصص",w4:"موظف خدمة عملاء بيتابع طلباتك وعملاءك.",w5t:"تقارير للنمو",w5:"تقارير عن المناطق والطلبات الضايعة وسرعة التحويل والعملاء الراجعين.",w6t:"مكافآت",w6:"اكسب نقاط ولاء وإحالة تستبدلها برصيد أو طلبات توصيل مجانية.",
